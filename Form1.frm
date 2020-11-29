@@ -153,7 +153,7 @@ Option Explicit
 'http://www.activevb.de/tipps/vb6tipps/tipp0347.html  ' 15.06.2003
 'http://www.activevb.de/rubriken/faq/faq0151.html     ' 16.12.2006
 
-'4 different answers to the question:
+'6 different answers to the question:
 'Is the program running in the IDE during debugging, or does it run as compiled exe on the user-computer?
 'when to use which trick if you have
 'standard.exe, in VB-IDE during debugging, in User-Control
