@@ -1,5 +1,5 @@
 # IsInIDE
-## The question "is in IDE" answered in 6 different ways
+## The question "is in IDE" answered in 6 different ways  
 For some debugging reasons you may want to know during runtime whether the program is running in the IDE, or 
 runs compiled as exe on the user-computer.
 Here are 6 different solutions to show you how you could deal with this problem, and when to use which trick,
