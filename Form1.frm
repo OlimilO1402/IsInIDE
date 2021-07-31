@@ -12,7 +12,7 @@ Begin VB.Form Form1
    ScaleHeight     =   2655
    ScaleWidth      =   6855
    StartUpPosition =   3  'Windows-Standard
-   Begin Projekt1.UserControl1 UserControl11 
+   Begin PIsInIDE.UserControl1 UserControl11 
       Height          =   1575
       Left            =   2880
       TabIndex        =   12
