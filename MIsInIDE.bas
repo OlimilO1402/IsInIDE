@@ -171,3 +171,21 @@ End Function
 '    Debug.Assert (IsInIDE6 = True)
 'End Function
 '
+
+Public Sub CheckIsInIDE6()
+    Dim bInIde          As Boolean
+    
+    Debug.Assert SetTrue(bInIde)
+    If bInIde Then
+        ' do stuff
+        MsgBox "Yeah in IDE"
+    End If
+    ' do other stuff
+    MsgBox "Nope not in IDE"
+End Sub
+
+Public Function SetTrue(bValue As Boolean) As Boolean
+    bValue = True
+    SetTrue = True
+End Function
+

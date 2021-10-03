@@ -2,14 +2,14 @@ VERSION 5.00
 Begin VB.Form Form1 
    BorderStyle     =   1  'Fest Einfach
    Caption         =   "The Question ""Is in IDE"" Answered in 6 different  ways"
-   ClientHeight    =   2655
+   ClientHeight    =   3360
    ClientLeft      =   45
    ClientTop       =   390
    ClientWidth     =   6855
    LinkTopic       =   "Form1"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   ScaleHeight     =   2655
+   ScaleHeight     =   3360
    ScaleWidth      =   6855
    StartUpPosition =   3  'Windows-Standard
    Begin PIsInIDE.UserControl1 UserControl11 
@@ -168,5 +168,7 @@ Private Sub Form_Load()
     LblIsInIDEA4.Caption = MIsInIDE.IsInIDE4
     LblIsInIDEA5.Caption = MIsInIDE.IsInIDE5
     'LblIsInIDEA6.Caption = MIsInIDE.IsInIDE6
+    MIsInIDE.CheckIsInIDE6
+    
 End Sub
 
