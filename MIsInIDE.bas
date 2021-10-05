@@ -13,7 +13,7 @@ End Enum
     Private Declare PtrSafe Function GetWindow Lib "user32" (ByVal hwnd As LongPtr, ByVal wCmd As Long) As Long
 #Else
     Public Enum LongPtr
-        [None]
+        [_]
     End Enum
     Private Declare Function GetClassName Lib "user32" Alias "GetClassNameA" (ByVal hWnd As LongPtr, ByVal lpClassName As String, ByVal nMaxCount As Long) As Long
     Private Declare Function GetParent Lib "user32" (ByVal hWnd As LongPtr) As Long
@@ -159,29 +159,21 @@ Public Function IsInIDE5( _
         IsInIDE5 = Not bComp__
     End If
 End Function
-
 'Kommentar von JTK-One am 02.07.2004 um 16:25
-'
 'Es gibt auch die Eigenschaft:
 'Ambient.UserMode
-'Damit kann man bei OCXen prima zwischen Design- und Runtime unterscheide.
-
-'Public Function IsInIDE6() As Boolean
-'    'if you see semoetihing like this, don't trust, it does not work
-'    Debug.Assert (IsInIDE6 = True)
-'End Function
-'
+'Damit kann man bei OCXen prima zwischen Design- und Runtime unterscheiden.
 
 Public Sub CheckIsInIDE6()
-    Dim bInIde          As Boolean
+    Dim bInIde As Boolean
     
     Debug.Assert SetTrue(bInIde)
-    #If bInIde Then
+    If bInIde Then
         ' do stuff
         MsgBox "Do debug stuff: Yeah we're in IDE"
-    #End If
+    End If
     ' do other stuff
-    MsgBox "Do another stuff"
+    MsgBox "Do other stuff"
 End Sub
 
 Public Function SetTrue(bValue As Boolean) As Boolean
