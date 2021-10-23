@@ -164,13 +164,19 @@ End Function
 'Ambient.UserMode
 'Damit kann man bei OCXen prima zwischen Design- und Runtime unterscheiden.
 
+'according to Wqweto's suggestion
+'https://github.com/wqweto
+'Using compiler optimizations
+'https://github.com/OlimilO1402/IsInIDE/issues/1
 Public Sub CheckIsInIDE6()
     Dim bInIde As Boolean
     
     Debug.Assert SetTrue(bInIde)
     If bInIde Then
         ' do stuff
-        MsgBox "Do debug stuff: Yeah we're in IDE"
+        Dim i As Long
+        i = &HCAFEBABE
+        MsgBox Hex(i)
     End If
     ' do other stuff
     MsgBox "Do other stuff"

@@ -12,14 +12,22 @@ Begin VB.Form Form1
    ScaleHeight     =   3360
    ScaleWidth      =   6855
    StartUpPosition =   3  'Windows-Standard
+   Begin VB.CommandButton BtnInfo 
+      Caption         =   "Info"
+      Height          =   375
+      Left            =   5880
+      TabIndex        =   15
+      Top             =   120
+      Width           =   735
+   End
    Begin PIsInIDE.UserControl1 UserControl11 
       Height          =   1575
-      Left            =   2880
+      Left            =   2760
       TabIndex        =   12
-      Top             =   240
+      Top             =   600
       Width           =   3855
-      _ExtentX        =   6800
-      _ExtentY        =   2778
+      _extentx        =   6800
+      _extenty        =   2778
    End
    Begin VB.Label LblIsInIDEQ1 
       AutoSize        =   -1  'True
@@ -152,6 +160,11 @@ Attribute VB_Exposed = False
 Option Explicit
 'http://www.activevb.de/tipps/vb6tipps/tipp0347.html  ' 15.06.2003
 'http://www.activevb.de/rubriken/faq/faq0151.html     ' 16.12.2006
+
+Private Sub BtnInfo_Click()
+    MsgBox App.CompanyName & " " & App.EXEName & " v" & App.Major & "." & App.Minor & "." & App.Revision & vbCrLf & _
+           App.FileDescription, vbOKOnly Or vbInformation
+End Sub
 
 '6 different answers to the question:
 'Is the program running in the IDE during debugging, or does it run as compiled exe on the user-computer?
